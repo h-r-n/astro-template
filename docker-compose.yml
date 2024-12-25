@@ -6,6 +6,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - '3000:3000'
+      - '4321:4321'
     volumes:
       - ./app:/app
     stdin_open: true
