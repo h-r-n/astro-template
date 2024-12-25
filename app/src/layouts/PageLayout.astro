@@ -16,10 +16,17 @@ const { metadata } = Astro.props;
 
 <Layout metadata={metadata}>
   <slot name="header">
-    <Header {...headerData} isSticky showRssFeed showToggleTheme />
+    <Header {...headerData} isSticky showToggleTheme />
   </slot>
-  <main>
-    <slot />
+  <main class="py-8 px-4 md:py-16 md:px-8">
+    <div class="grid grid-cols-4 gap-6">
+      <div class="col-span-4 lg:col-span-3">
+        <slot />
+      </div>
+      <div>
+        <!-- サイドバー -->
+      </div>
+    </div>
   </main>
   <slot name="footer">
     <Footer {...footerData} />
